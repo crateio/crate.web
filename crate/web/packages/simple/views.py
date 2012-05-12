@@ -10,7 +10,7 @@ from django.views.generic.list import ListView
 from django.utils.decorators import method_decorator
 from django.utils.translation import ugettext as _
 
-from packages.models import Package
+from crate.web.packages.models import Package
 
 
 def not_found(request):

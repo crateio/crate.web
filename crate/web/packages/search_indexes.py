@@ -2,8 +2,8 @@ from django.utils.translation import ugettext_noop as _
 
 from haystack import indexes
 
-from packages.models import Package
-from search.indexes import PackageCelerySearchIndex
+from crate.web.packages.models import Package
+from crate.web.search.indexes import PackageCelerySearchIndex
 
 LICENSES = {
     "GNU General Public License (GPL)": "GPL",

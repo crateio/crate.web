@@ -1,6 +1,6 @@
 from celery.task import task
 
-from packages.simple.views import PackageIndex
+from crate.web.packages.simple.views import PackageIndex
 
 
 @task

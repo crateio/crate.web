@@ -33,8 +33,9 @@ from model_utils.models import TimeStampedModel
 
 from crate.fields import JSONField
 from crate.utils.datatools import track_data
-from packages.evaluators import ReleaseEvaluator
-from packages.utils import verlib
+
+from crate.web.packages.evaluators import ReleaseEvaluator
+from crate.web.packages.utils import verlib
 
 ALLOWED_TAGS = bleach.ALLOWED_TAGS + [
                     "br", "img", "span", "div", "pre", "p",

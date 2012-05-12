@@ -1,20 +1,18 @@
 # -*- coding: utf-8 -*-
-import datetime
 from south.db import db
 from south.v2 import SchemaMigration
-from django.db import models
 
 
 class Migration(SchemaMigration):
 
     def forwards(self, orm):
-
         # Changing field 'List.slug'
         db.alter_column('lists_list', 'slug', self.gf('django.db.models.fields.SlugField')(default='', max_length=50))
-    def backwards(self, orm):
 
+    def backwards(self, orm):
         # Changing field 'List.slug'
         db.alter_column('lists_list', 'slug', self.gf('django.db.models.fields.SlugField')(max_length=50, null=True))
+
     models = {
         'auth.group': {
             'Meta': {'object_name': 'Group'},

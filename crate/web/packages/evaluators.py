@@ -7,7 +7,7 @@ from slumber import exceptions
 from django.core.cache import cache
 from django.utils.translation import ugettext as _
 
-from packages.utils import verlib
+from crate.web.packages.utils import verlib
 
 
 class ReleaseEvaluator(object):

@@ -3,8 +3,8 @@ from django.http import Http404
 from django.utils.translation import ugettext as _
 from django.views.generic.detail import DetailView
 
-from history.models import Event
-from packages.models import Release
+from crate.web.history.models import Event
+from crate.web.packages.models import Release
 
 
 class ReleaseDetail(DetailView):

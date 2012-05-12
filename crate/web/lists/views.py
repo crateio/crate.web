@@ -11,8 +11,8 @@ from django.utils.translation import ugettext as _
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-from lists.models import List
-from packages.models import Package
+from crate.web.lists.models import List
+from crate.web.packages.models import Package
 
 
 class AddToList(View):

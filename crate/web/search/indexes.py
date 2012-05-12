@@ -2,7 +2,7 @@ from django.db.models import signals
 
 from celery_haystack.indexes import CelerySearchIndex as BaseCelerySearchIndex
 
-from packages.models import Package, Release, ReleaseFile
+from crate.web.packages.models import Package, Release, ReleaseFile
 
 
 class PackageCelerySearchIndex(BaseCelerySearchIndex):

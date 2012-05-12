@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from lists.models import List
+from crate.web.lists.models import List
 
 
 class PackageInline(admin.TabularInline):

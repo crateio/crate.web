@@ -1,6 +1,6 @@
 from django import forms
 
-from lists.models import List
+from crate.web.lists.models import List
 
 
 class CreateListForm(forms.ModelForm):

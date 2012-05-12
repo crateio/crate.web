@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from history.models import Event
+from crate.web.history.models import Event
 
 
 class EventAdmin(admin.ModelAdmin):

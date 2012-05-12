@@ -2,7 +2,7 @@ from django import template
 from django.core.cache import cache
 from django.db.models import Sum
 
-from packages.models import Package, Release, ReleaseFile, ChangeLog
+from crate.web.packages.models import Package, Release, ReleaseFile, ChangeLog
 
 register = template.Library()
 

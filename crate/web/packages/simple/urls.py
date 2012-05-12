@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, url
 
-from packages.simple.views import PackageIndex, PackageDetail
+from crate.web.packages.simple.views import PackageIndex, PackageDetail
 
 handler404 = "packages.simple.views.not_found"
 

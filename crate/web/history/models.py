@@ -7,7 +7,7 @@ from jsonfield import JSONField
 from model_utils import Choices
 from model_utils.models import TimeStampedModel
 
-from packages.models import Package, Release, ReleaseFile
+from crate.web.packages.models import Package, Release, ReleaseFile
 
 
 class Event(TimeStampedModel):

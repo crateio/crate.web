@@ -7,8 +7,8 @@ from tastypie.constants import ALL
 from tastypie.resources import ModelResource
 from tastypie.utils import trailing_slash
 
-from packages.models import Package, Release, ReleaseFile, ReleaseURI, TroveClassifier
-from packages.models import ReleaseRequire, ReleaseProvide, ReleaseObsolete
+from crate.web.packages.models import Package, Release, ReleaseFile, ReleaseURI, TroveClassifier
+from crate.web.packages.models import ReleaseRequire, ReleaseProvide, ReleaseObsolete
 
 
 class InlineTroveClassifierResource(ModelResource):

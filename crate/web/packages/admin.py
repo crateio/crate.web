@@ -1,8 +1,8 @@
 from django.contrib import admin
 
-from packages.models import Package, Release, ReleaseFile, TroveClassifier, PackageURI
-from packages.models import ReleaseRequire, ReleaseProvide, ReleaseObsolete, ReleaseURI, ChangeLog
-from packages.models import DownloadDelta, ReadTheDocsPackageSlug
+from crate.web.packages.models import Package, Release, ReleaseFile, TroveClassifier, PackageURI
+from crate.web.packages.models import ReleaseRequire, ReleaseProvide, ReleaseObsolete, ReleaseURI, ChangeLog
+from crate.web.packages.models import DownloadDelta, ReadTheDocsPackageSlug
 
 
 class PackageURIAdmin(admin.TabularInline):

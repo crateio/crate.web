@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, url
 
-from lists.views import AddToList, AddToNewList, RemoveFromList, ListsList, ListDetail
+from crate.web.lists.views import AddToList, AddToNewList, RemoveFromList, ListsList, ListDetail
 
 urlpatterns = patterns("",
     url(r"^(?P<username>[^/]+)/lists/$", ListsList.as_view(), name="lists_list"),

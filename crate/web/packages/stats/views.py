@@ -8,7 +8,7 @@ from django.http import HttpResponse
 from django.views.decorators.cache import cache_page, cache_control
 from django.shortcuts import get_object_or_404
 
-from packages.models import Package, Release, DownloadDelta
+from crate.web.packages.models import Package, Release, DownloadDelta
 
 
 def fetch_stats(package):

@@ -8,7 +8,8 @@ from django.views.generic.base import TemplateResponseMixin, View
 from django.views.generic.edit import FormMixin
 
 from saved_searches.models import SavedSearch
-from search.forms import SearchForm
+
+from crate.web.search.forms import SearchForm
 
 
 class Search(TemplateResponseMixin, FormMixin, View):

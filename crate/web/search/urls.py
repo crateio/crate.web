@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, url
 
-from search.views import Search
+from crate.web.search.views import Search
 
 
 urlpatterns = patterns("",

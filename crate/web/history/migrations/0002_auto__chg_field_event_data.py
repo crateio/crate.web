@@ -1,20 +1,18 @@
 # -*- coding: utf-8 -*-
-import datetime
 from south.db import db
 from south.v2 import SchemaMigration
-from django.db import models
 
 
 class Migration(SchemaMigration):
 
     def forwards(self, orm):
-
         # Changing field 'Event.data'
         db.alter_column('history_event', 'data', self.gf('jsonfield.fields.JSONField')(null=True))
-    def backwards(self, orm):
 
+    def backwards(self, orm):
         # User chose to not deal with backwards NULL issues for 'Event.data'
         raise RuntimeError("Cannot reverse this migration. 'Event.data' and its values cannot be restored.")
+
     models = {
         'history.event': {
             'Meta': {'object_name': 'Event'},

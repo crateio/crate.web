@@ -1,7 +1,7 @@
 from jingo import register
 
-from lists.forms import CreateListForm
-from lists.models import List
+from crate.web.lists.forms import CreateListForm
+from crate.web.lists.models import List
 
 
 @register.function
@@ -10,6 +10,7 @@ def lists_for_user(user):
         return List.objects.filter(user=user).prefetch_related("packages")
 
     return []
+
 
 @register.function
 def new_list_with_package_form():
