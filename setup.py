@@ -4,13 +4,17 @@ from setuptools import setup, find_packages
 install_requires = [
     "bleach",
     "jinja2",
+    "celery-haystack",
     "Django>=1.4",
+    "django-celery",
+    "django-haystack",
     "django-jsonfield",
     "django-model-utils",
     "django-tastypie",
     "docutils",
     "isoweek",
     "lxml",
+    "saved_searches",
 ]
 
 setup(
