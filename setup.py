@@ -16,7 +16,7 @@ install_requires = [
 
 setup(
     name="crate.web",
-    version="0.1",
+    version="0.1.2",
     author="Donald Stufft",
     author_email="donald@crate.io",
     url="https://github.com/crateio/crate.web",
