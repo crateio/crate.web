@@ -12,7 +12,7 @@ class Migration(SchemaMigration):
         db.create_table('packages_downloadstatscache', (
             ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('package', self.gf('django.db.models.fields.related.OneToOneField')(to=orm['packages.Package'], unique=True)),
-            ('data', self.gf('crate.fields.json.JSONField')()),
+            ('data', self.gf('django.db.models.fields.TextField')()),
         ))
         db.send_create_signal('packages', ['DownloadStatsCache'])
 
@@ -39,7 +39,7 @@ class Migration(SchemaMigration):
         },
         'packages.downloadstatscache': {
             'Meta': {'object_name': 'DownloadStatsCache'},
-            'data': ('crate.fields.json.JSONField', [], {}),
+            'data': ('django.db.models.fields.TextField', [], {}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'package': ('django.db.models.fields.related.OneToOneField', [], {'to': "orm['packages.Package']", 'unique': 'True'})
         },

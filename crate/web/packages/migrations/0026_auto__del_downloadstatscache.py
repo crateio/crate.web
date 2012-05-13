@@ -14,7 +14,7 @@ class Migration(SchemaMigration):
     def backwards(self, orm):
         # Adding model 'DownloadStatsCache'
         db.create_table('packages_downloadstatscache', (
-            ('data', self.gf('crate.fields.json.JSONField')()),
+            ('data', self.gf('django.db.models.fields.TextField')()),
             ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('package', self.gf('django.db.models.fields.related.OneToOneField')(to=orm['packages.Package'], unique=True)),
         ))
