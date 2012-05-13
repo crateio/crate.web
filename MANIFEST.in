@@ -1,1 +1,1 @@
-include README.rst LICENSE AUTHORS crate/web/theme/*
+include README.rst LICENSE AUTHORS *.html *.txt
