@@ -55,7 +55,7 @@ class Migration(SchemaMigration):
             ('maintainer_email', self.gf('django.db.models.fields.TextField')(blank=True)),
             ('requires_python', self.gf('django.db.models.fields.CharField')(max_length=25, blank=True)),
             ('download_uri', self.gf('django.db.models.fields.URLField')(max_length=1024, blank=True)),
-            ('raw_data', self.gf('crate.fields.json.JSONField')(null=True, blank=True)),
+            ('raw_data', self.gf('django.db.models.fields.TextField')(null=True, blank=True)),
         ))
         db.send_create_signal('packages', ['Release'])
 
@@ -203,7 +203,7 @@ class Migration(SchemaMigration):
             'order': ('django.db.models.fields.IntegerField', [], {'default': '0'}),
             'package': ('django.db.models.fields.related.ForeignKey', [], {'related_name': "'releases'", 'to': "orm['packages.Package']"}),
             'platform': ('django.db.models.fields.TextField', [], {'blank': 'True'}),
-            'raw_data': ('crate.fields.json.JSONField', [], {'null': 'True', 'blank': 'True'}),
+            'raw_data': ('django.db.models.fields.TextField', [], {'null': 'True', 'blank': 'True'}),
             'requires_python': ('django.db.models.fields.CharField', [], {'max_length': '25', 'blank': 'True'}),
             'summary': ('django.db.models.fields.TextField', [], {}),
             'version': ('django.db.models.fields.CharField', [], {'max_length': '512'})

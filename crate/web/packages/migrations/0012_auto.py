@@ -65,7 +65,7 @@ class Migration(SchemaMigration):
             'order': ('django.db.models.fields.IntegerField', [], {'default': '0', 'db_index': 'True'}),
             'package': ('django.db.models.fields.related.ForeignKey', [], {'related_name': "'releases'", 'to': "orm['packages.Package']"}),
             'platform': ('django.db.models.fields.TextField', [], {'blank': 'True'}),
-            'raw_data': ('crate.fields.json.JSONField', [], {'null': 'True', 'blank': 'True'}),
+            'raw_data': ('django.db.models.fields.TextField', [], {'null': 'True', 'blank': 'True'}),
             'requires_python': ('django.db.models.fields.CharField', [], {'max_length': '25', 'blank': 'True'}),
             'summary': ('django.db.models.fields.TextField', [], {}),
             'version': ('django.db.models.fields.CharField', [], {'max_length': '512'})
