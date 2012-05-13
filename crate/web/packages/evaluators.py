@@ -108,7 +108,7 @@ class ReleaseEvaluator(object):
                 ),
             }
 
-            from packages.models import ReadTheDocsPackageSlug
+            from crate.web.packages.models import ReadTheDocsPackageSlug
 
             qs = ReadTheDocsPackageSlug.objects.filter(package=self.package)
             slug = qs[0].slug if qs else self.package.name

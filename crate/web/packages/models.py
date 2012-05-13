@@ -31,8 +31,7 @@ from model_utils import Choices
 from model_utils.fields import AutoCreatedField, AutoLastModifiedField
 from model_utils.models import TimeStampedModel
 
-from crate.fields import JSONField
-from crate.utils.datatools import track_data
+#from crate.utils.datatools import track_data
 
 from crate.web.packages.evaluators import ReleaseEvaluator
 from crate.web.packages.utils import verlib
@@ -155,7 +154,7 @@ class PackageURI(models.Model):
         return self.uri
 
 
-@track_data("hidden")
+#@track_data("hidden")
 class Release(models.Model, ReleaseEvaluator):
 
     created = AutoCreatedField("created", db_index=True)
@@ -189,8 +188,6 @@ class Release(models.Model, ReleaseEvaluator):
     download_uri = models.URLField(max_length=1024, blank=True)
 
     classifiers = models.ManyToManyField(TroveClassifier, related_name="releases", blank=True)
-
-    raw_data = JSONField(null=True, blank=True)
 
     class Meta:
         unique_together = ("package", "version")
@@ -338,7 +335,7 @@ class Release(models.Model, ReleaseEvaluator):
         return self._changelog_html
 
 
-@track_data("hidden")
+#@track_data("hidden")
 class ReleaseFile(models.Model):
 
     TYPES = Choices(
