@@ -25,6 +25,7 @@ setup(
     url="https://github.com/crateio/crate.web",
     description="crate.web is a Django app that provides the building blocks to build a Package Index Server.",
     license=open("LICENSE").read(),
+    namespace_packages=["crate"],
     packages=find_packages(exclude=("tests",)),
     package_data={'': ['LICENSE', 'NOTICE']},
     include_package_data=True,
