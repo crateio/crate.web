@@ -1,1 +1,1 @@
-from crate.dashboard.index import CrateIndexDashboard
+from crate.web.dashboard.index import CrateIndexDashboard
