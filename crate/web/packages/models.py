@@ -31,10 +31,9 @@ from model_utils import Choices
 from model_utils.fields import AutoCreatedField, AutoLastModifiedField
 from model_utils.models import TimeStampedModel
 
-#from crate.utils.datatools import track_data
-
 from crate.web.packages.evaluators import ReleaseEvaluator
 from crate.web.packages.utils import verlib
+from crate.web.packages.utils.datatools import track_data
 
 ALLOWED_TAGS = bleach.ALLOWED_TAGS + [
                     "br", "img", "span", "div", "pre", "p",
@@ -154,7 +153,7 @@ class PackageURI(models.Model):
         return self.uri
 
 
-#@track_data("hidden")
+@track_data("hidden")
 class Release(models.Model, ReleaseEvaluator):
 
     created = AutoCreatedField("created", db_index=True)
@@ -335,7 +334,7 @@ class Release(models.Model, ReleaseEvaluator):
         return self._changelog_html
 
 
-#@track_data("hidden")
+@track_data("hidden")
 class ReleaseFile(models.Model):
 
     TYPES = Choices(
@@ -525,5 +524,5 @@ def release_changelog(sender, **kwargs):
 @receiver(post_save, sender=Package)
 @receiver(post_delete, sender=Package)
 def regenerate_simple_index(sender, **kwargs):
-    from packages.tasks import refresh_package_index_cache
+    from crate.web.packages.tasks import refresh_package_index_cache
     refresh_package_index_cache.delay()
