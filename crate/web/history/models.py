@@ -83,9 +83,13 @@ def history_releasefile_update(instance, created, **kwargs):
             )
 
     if e is not None:
-        e.data = {
-            "filename": instance.filename,
-            "digest": instance.digest,
-            "uri": instance.get_absolute_url(),
-        }
-        e.save()
+        try:
+            e.data = {
+                "filename": instance.filename,
+                "digest": instance.digest,
+                "uri": instance.get_absolute_url(),
+            }
+        except ValueError:
+            pass
+        else:
+            e.save()
