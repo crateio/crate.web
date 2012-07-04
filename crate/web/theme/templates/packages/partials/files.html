@@ -5,7 +5,7 @@
       <th>{{ gettext("Type") }}</th>
       <th>{{ gettext("Python Version") }}</th>
       <th>{{ gettext("Uploaded On") }}</th>
-      <th>{{ gettext("Size") }}</th>
+      <th>{# {{ gettext("Size") }} #}</th>
       <th>{{ gettext("Downloads") }}</th>
     </tr>
   </thead>
@@ -16,7 +16,7 @@
         <td>{{ file.get_type_display() }}</td>
         <td>{{ file.get_python_version_display() }}</td>
         <td>{{ file.created|date("DATE_FORMAT") }}</td>
-        <td>{{ file.file.size|filesizeformat }}</td>
+        <td>{# {{ file.file.size|filesizeformat }} #}</td>
         <td>{{ file.downloads|intcomma }}</td>
       </tr>
     {% else %}
