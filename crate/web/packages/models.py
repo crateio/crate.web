@@ -345,6 +345,7 @@ class ReleaseFile(models.Model):
         ("bdist_rpm", "RPM"),
         ("bdist_dumb", _("Dumb Binary Distribution")),
         ("bdist_wininst", _("Windows Installer Binary Distribution")),
+        ("bdist_wheel", _("Wheel")),
     )
 
     created = AutoCreatedField("created", db_index=True)
