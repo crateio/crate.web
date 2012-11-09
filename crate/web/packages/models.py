@@ -46,6 +46,7 @@ ALLOWED_TAGS = bleach.ALLOWED_TAGS + [
 ALLOWED_ATTRIBUTES = dict(bleach.ALLOWED_ATTRIBUTES.items())
 ALLOWED_ATTRIBUTES.update({
     "img": ["src"],
+    "span": ["class"],
 })
 
 # Get the Storage Engine for Packages
