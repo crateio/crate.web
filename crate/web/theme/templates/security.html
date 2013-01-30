@@ -1,0 +1,11 @@
+{% extends "site_base.html" %}
+
+{% block body %}
+    <h2>Security</h2>
+    <p>All security issues should be reported to <a href="mailto:security@crate.io">security@crate.io</a>.</p>
+    <p>They may be encrypted using the <a href="https://github.com/crateio/crate.web/blob/master/crate/web/theme/templates/security.asc">security key<a>:
+        <pre>
+            {% include "security.asc" %}
+        </pre>
+    </p>
+{% endblock %}
