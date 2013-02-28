@@ -5,10 +5,15 @@
 {% block body %}
     <h2>Status Quo</h2>
     <div class="row">
-    {% for project in projects %}
+    {% for project, releases in projects.iteritems %}
       <div class="span3">
-        <div style="font-size: 1.2em; font-weight: bold;">
-          <a href="{{ project.get_absolute_url() }}">{{ project.name }}</a>
+        <div style="padding-top: 1em; padding-bottom: 1em; border: 1px #eee solid;">
+          <div style="font-size: 1.2em; font-weight: bold;">
+            <a href="{{ project.get_absolute_url() }}">{{ project.name }}</a>
+          </div>
+          <div>
+            Versions: {% for v in releases %}v.version{% endfor %}
+          </div>
         </div>
       </div>
     {% endfor %}
