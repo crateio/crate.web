@@ -2,6 +2,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.http import Http404
 from django.utils.translation import ugettext as _
 from django.views.generic.detail import DetailView
+from django.shortcuts import render
 
 from crate.web.history.models import Event
 from crate.web.packages.models import Release
@@ -49,3 +50,8 @@ class ReleaseDetail(DetailView):
             raise Http404(_(u"No %(verbose_name)s found matching the query") %
                           {'verbose_name': queryset.model._meta.verbose_name})
         return obj
+
+
+def fuck_the_status_quo(request):
+    blah = Package.objects.exclude(name__in=Release.objects.exclude(files=None).distinct("package").values_list("package__name", flat=True))
+    return render(request, "status_quo.html", {"projects": blah})

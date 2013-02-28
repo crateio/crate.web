@@ -1,0 +1,12 @@
+{% extends "site_base.html" %}
+
+{% block head_title %}Status Quo{% endblock %}
+
+{% block body %}
+    <h2>Status Quo</h2>
+    {% for package in packages %}
+      <div>
+        <a href="package.get_absolute_url()">{{ package.name }}</a>
+      </div>
+    {% endfor %}
+{% endblock %}
