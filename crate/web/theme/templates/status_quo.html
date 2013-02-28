@@ -4,9 +4,9 @@
 
 {% block body %}
     <h2>Status Quo</h2>
-    {% for package in packages %}
+    {% for project in projects %}
       <div>
-        <a href="package.get_absolute_url()">{{ package.name }}</a>
+        <a href="project.get_absolute_url()">{{ project.name }}</a>
       </div>
     {% endfor %}
 {% endblock %}
