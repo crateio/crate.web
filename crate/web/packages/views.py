@@ -53,5 +53,8 @@ class ReleaseDetail(DetailView):
 
 
 def fuck_the_status_quo(request):
-    blah = Package.objects.exclude(name__in=Release.objects.exclude(files=None).distinct("package").values_list("package__name", flat=True)).order_by("name")
+    #blah = Package.objects.exclude(name__in=Release.objects.exclude(files=None).distinct("package").values_list("package__name", flat=True)).order_by("name")
+    blah = {}
+    for r in Release.objects.filter(files=None).select_related("package"):
+        blah.setdefault(r.package.name, []).append(r)
     return render(request, "status_quo.html", {"projects": blah})
