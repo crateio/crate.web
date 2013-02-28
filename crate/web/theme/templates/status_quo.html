@@ -4,9 +4,11 @@
 
 {% block body %}
     <h2>Status Quo</h2>
+    <div class="row">
     {% for project in projects %}
-      <div>
+      <div class="span3">
         <a href="project.get_absolute_url()">{{ project.name }}</a>
       </div>
     {% endfor %}
+    </div>
 {% endblock %}
