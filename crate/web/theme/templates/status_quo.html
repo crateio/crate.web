@@ -5,14 +5,11 @@
 {% block body %}
     <h2 style="margin-bottom: 2em;">Externally Hosted Packages</h2>
     <div class="row">
-    {% for project, releases in projects.iteritems %}
+    {% for project in projects %}
       <div class="span3">
         <div style="padding-top: 1em; padding-bottom: 1em; border: 1px #eee solid;">
           <div style="font-size: 1.2em; font-weight: bold;">
             <a href="{{ project.get_absolute_url() }}">{{ project.name }}</a>
-          </div>
-          <div>
-            Versions: {% for v in releases %}v.version{% endfor %}
           </div>
         </div>
       </div>
