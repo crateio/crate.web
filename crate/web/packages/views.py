@@ -5,7 +5,7 @@ from django.views.generic.detail import DetailView
 from django.shortcuts import render
 
 from crate.web.history.models import Event
-from crate.web.packages.models import Release
+from crate.web.packages.models import Release, Package
 
 
 class ReleaseDetail(DetailView):
