@@ -4,6 +4,11 @@
 
 {% block body %}
     <h2 style="margin-bottom: 2em;">Externally Hosted Packages</h2>
+    <p>
+        These packages do not have any files hosted on PyPI, if you're
+        installing any of them you are opening yourself up to a number of
+        potential security, reliability, performance, and privacy issues.
+    </p>
     <div class="row">
     {% for project in projects %}
       <div class="span3" style="margin-bottom: 1em;">
