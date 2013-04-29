@@ -207,6 +207,10 @@ class Release(models.Model, ReleaseEvaluator):
                 html = lxml.html.fromstring(html_string)
 
                 for link in html.xpath("//a/@href"):
+                    if len(link) > 400:
+                        # @@@ ugly as sin, but fixes shit for now
+                        continue
+
                     try:
                         if any(urlparse.urlparse(link)[:5]):
                             PackageURI.objects.get_or_create(package=self.package, uri=link)
